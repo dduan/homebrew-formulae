@@ -1,14 +1,14 @@
 class Drstring < Formula
-  version '0.4.3'
+  version '0.5.0'
   desc "Linter, formatter for Swift docstrings."
   homepage "https://github.com/dduan/drstring"
 
   if OS.mac?
     url "https://github.com/dduan/DrString/releases/download/v#{version}/drstring-x86_64-apple-darwin.tar.gz"
-    sha256 "715bc3c0ad7f57492ed764ced5884b87c9f98c866a931ea0ca49116258d6aa93"
+    sha256 "35e7a66c27f8babe549da3eff2b79bdcd9b6bcb5c61f9837cf9fedbe52908358"
   elsif OS.linux?
     url "https://github.com/dduan/DrString/archive/v#{version}.tar.gz"
-    sha256 "83fafbe610477bcaf4ea79698b9d277389691fc8d0a8641810afd11d40473a23"
+    sha256 "62d5270b690ebd65f60464f626d6c5c919fa4103d588346df7dc3786734db6fb"
   end
 
   def install
