@@ -1,20 +1,19 @@
 class Drstring < Formula
-  version '0.5.0'
+  version '0.6.1'
   desc "Linter, formatter for Swift docstrings."
   homepage "https://github.com/dduan/drstring"
 
   if OS.mac?
-    url "https://github.com/dduan/DrString/releases/download/v#{version}/drstring-x86_64-apple-darwin.tar.gz"
-    sha256 "35e7a66c27f8babe549da3eff2b79bdcd9b6bcb5c61f9837cf9fedbe52908358"
+    url "https://github.com/dduan/DrString/releases/download/#{version}/drstring-universal-apple-darwin.tar.gz"
+    sha256 "99833f0ad3d9f3bbf40aee88c6f959a0a9b03e3b7b34e2fca660644e13c1f3ef"
   elsif OS.linux?
-    url "https://github.com/dduan/DrString/archive/v#{version}.tar.gz"
-    sha256 "62d5270b690ebd65f60464f626d6c5c919fa4103d588346df7dc3786734db6fb"
+    url "https://github.com/dduan/DrString/archive/#{version}.tar.gz"
+    sha256 "e18d081118b2bb2b7ba6aa17ae60e32acf1ee26f7c61f2d75e04b43e6bb5c40f"
   end
 
   def install
     if OS.mac?
-      bin.install "bin/drstring"
-      lib.install "lib/lib_InternalSwiftSyntaxParser.dylib"
+      bin.install "drstring"
     elsif OS.linux?
       system "make", "build"
       bin.install ".build/release/drstring"
