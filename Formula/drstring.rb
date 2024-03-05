@@ -1,5 +1,5 @@
 class Drstring < Formula
-  version '0.5.0'
+  version '0.6.1'
   desc "Linter, formatter for Swift docstrings."
   homepage "https://github.com/dduan/drstring"
 
